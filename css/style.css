@@ -16,7 +16,7 @@ a{
   color: inherit;
 }
 img{
-  max-width: 100%;
+ max-width: 100%;
 }
 
 .container{
@@ -137,13 +137,14 @@ img{
 .animals {
   background: linear-gradient(102deg, #FFF6DF 17.38%, #FFDFDE 81.25%);
   border-radius: 60px;
-  padding: 75px 122px 75px 125px;
+  
 }
 .animals__container {}
 .animals__body {
+  padding: 75px 122px 75px 125px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 .animals__contant {
   max-width: 475px;
@@ -155,7 +156,9 @@ img{
   font-size: 40px;
 }
 
-.animals__text {}
+.animals__text {
+  max-width: 370px;
+}
 .animals__button {}
 
 .animals__img {
@@ -169,4 +172,81 @@ img{
 .footer__container {}
 .footer__text {
   text-align: center;
+}
+
+/* Responsive */
+
+/* Large: 992px - 1199px */
+@media (max-width: 1199px) {
+  .container {
+      max-width: 960px;
+  }
+}
+
+/* Medium: 768px - 991px */
+@media (max-width: 991px) {
+  .container {
+      max-width: 720px;
+  }
+  .main-block__body{
+    flex-direction: column-reverse;
+    row-gap: 51px;
+    text-align: center;
+  }
+  .main-block__contant{
+    max-width:none;
+  }
+  .animals__body {
+    padding: 0;
+    flex-direction: column-reverse;
+    text-align: center;
+    row-gap: 100px;
+    padding: 100px 0;
+  }
+
+  .animals__contant>*:not(:last-child) {
+    margin: 0 auto 30px auto;
+  }
+}
+
+/* Small: 576px - 767px */
+@media (max-width: 767px) {
+  .container {
+      max-width: 540px;
+  }
+
+}
+
+/* Extra small: 0px (320px) - 575px */
+@media (max-width: 575px) {
+  .main-block {
+    padding: 50px 0 0 0;
+  }
+/*   .main-block__img img{
+    max-width: 175px;
+  } */
+  .main-block__title {
+    font-size: 45px;
+}
+.inside-game {
+  padding: 90px 0;
+}
+.features__item {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 35px;
+}
+.animals__img{
+  max-width: 200px;
+}
+.footer {
+  padding: 90px 0;
+}
+.main-block__img{
+  max-width: 320px;
+}
+.main-block__img {
+  padding: 72px;
+}
 }
